@@ -19,6 +19,7 @@ def main():
 
     if re.search(searchFor, searchMe):
         print("Found a match!")
+        print(searchMe)
     else:
         print("No match!")
 
