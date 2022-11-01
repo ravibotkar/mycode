@@ -10,7 +10,7 @@ used to ask him what he was looking so worried about. He worked in local \
 radio..."
 mycomp = re.compile(r'\w+er\w+') # compiling mycomp as a reg ex
 hikerexample = mycomp.findall(hitchhiker)
-hikerexample = mycomp.findall(hitchhiker)
+print("The results of our hikerexample:", hikerexample)
 stringexample = mycomp.findall("This expression looks for places \
 where a combination of the letters er exist and are also surrounded \
 by at least one case insensitive alphanumeric.")
