@@ -22,7 +22,31 @@ def custom():
         else:
             lat = 40.284      # Hershey, PA
             lon = -76.649     # Hershey, PA
+
+    # starting coordinates
+    start_coords = [lat, lon]
     
+    # create the map
+    folium_map = folium.Map(location=start_coords, zoom_start=14)
+    
+    # return the HTML code that is the map
+    return folium_map._repr_html_()
+
+
+
+@app.route("/mymap", methods = ["GET"])   # other methods could be included in this list
+def mymap():
+    if request.method == "GET":
+        # if user supplied both lat and lon we can create a map
+        if request.args.get("lat") and request.args.get("lon"):
+            lat = request.args.get("lat")
+            lon = request.args.get("lon")
+        # else they didn't supply the correct arguments 
+        else:
+            lat = 40.284      # Hershey, PA
+            lon = -76.649     # Hershey, PA
+
+
     # starting coordinates
     start_coords = [lat, lon]
     
