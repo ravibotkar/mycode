@@ -31,6 +31,9 @@ def main():
     ## display the 2nd server in row2
     print(datacenterdecoded["row2"][1])
 
+    ## display the 2nd server in row2
+    print(datacenterdecoded["row3"][3])
+
     ## write code to
     ## display the last server in row3
 
