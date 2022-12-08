@@ -19,6 +19,7 @@ def main():
     commands = ["show ver", "show vlan", "show ip int brie"]
     
     for command in commands:
+        print("***********" + command + "*********")
         print(open_connection.send_command(command))
 
    # my_command = open_connection.send_command("show ver")
