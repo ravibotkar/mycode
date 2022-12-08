@@ -14,11 +14,16 @@ def main():
     
 #    open_connection = ConnectHandler(device_type='cisco_nxos', ip='sandbox-nxos-1.cisco.com', username='admin', password="Admin_1234!")
 
-    open_connection = ConnectHandler(device_type='cisco_nxos', ip='sw-1', username='admin', password="alta3")
+    open_connection = ConnectHandler(device_type='arista_eos', ip='sw-1', username='admin', password="alta3")
 
-    my_command = open_connection.send_command("show ver")
+    commands = ["show ver", "show vlan", "show ip int brie"]
+    
+    for command in commands:
+        print(open_connection.send_command(command))
 
-    print(my_command)
+   # my_command = open_connection.send_command("show ver")
+
+   # print(my_command)
 
 ## Call main()
 if __name__ == "__main__":
